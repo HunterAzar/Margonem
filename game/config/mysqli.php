@@ -1,0 +1,5 @@
+<?php
+
+$polaczenie = @new mysqli
+
+?>
