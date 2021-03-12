@@ -18,10 +18,10 @@ $("div#oHero").click(function(){
 });
 
 $(document).keydown(function (event) {
-if(event.keyCode==65){send('left',8,0,1);}
-if(event.keyCode==87){send('up',0,8,3);}
-if(event.keyCode==68){send('right',-8,0,2);}
-if(event.keyCode==83){send('down',0,-8,0);}	
+if(event.keyCode==65 || event.keyCode==37){send('left',8,0,1);}
+if(event.keyCode==87 || event.keyCode==38){send('up',0,8,3);}
+if(event.keyCode==68 || event.keyCode==39){send('right',-8,0,2);}
+if(event.keyCode==83 || event.keyCode==40){send('down',0,-8,0);}	
 });
 });
 
@@ -36,10 +36,10 @@ success : function (msg){
 loading = false;
 if (msg){
 $('#oMap').css("background-image","url("+msg+")");
-setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(0,"+direction+");",10);
-setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(1,"+direction+");",20);
-setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(2,"+direction+");",30);
-setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(3,"+direction+");",40);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(0,"+direction+");",20);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(1,"+direction+");",30);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(2,"+direction+");",40);
+setTimeout("map_poz(x+="+ox+",y+="+oy+");animation(3,"+direction+");",50);
 setTimeout("animation(0,"+direction+");",50);
 }
 

@@ -3,7 +3,16 @@ $host = 'localhost';
 $player = 'root';
 $pass = '';
 $db = 'margonem';
-
+function get_DB(){
+    $host = 'localhost';
+    $player = 'root';
+    $pass = '';
+    $db = 'margonem';
+    return [$host,$player,$pass,$db];
+}
+function get_CONN(){
+    
+}
 $connect = @mysqli_connect($host, $player, $pass) or die('socket error - no connect');
 if(is_string($connect)){
     echo("Błąd łączenia z DB");
